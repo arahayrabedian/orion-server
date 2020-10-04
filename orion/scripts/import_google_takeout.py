@@ -1,5 +1,4 @@
 import argparse
-import sys
 
 from jsonslicer import JsonSlicer
 
@@ -56,7 +55,6 @@ def import_google_location_history_json(
         app.ctx.db.session.commit()  # commit any stragglers.
 
 if __name__ == "__main__":
-    print(sys.argv)
     parser = argparse.ArgumentParser(description='Import Google Takeout to Orion.')
     parser.add_argument('path_to_json',
                         type=str,
