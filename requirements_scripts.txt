@@ -1,0 +1,2 @@
+-r requirements.txt
+jsonslicer==0.1.6  # requires system package `libyajl-dev`

@@ -143,3 +143,15 @@ However, Orion has limited support for publishing location events to a Kafka bro
 #### Docker
 
 It is *highly recommended* to follow the above instructions for installing Orion manually. However, you can try [`orion-docker`](https://github.com/LINKIWI/orion-docker) for a "one-click" Docker deployment solution, though stability is not guaranteed.
+
+#### Import from Google Location History
+
+A script has been set up to insert data en-masse from a Google Takeout location history file.
+
+This can be run with, for example:
+
+```python
+PYTHONPATH=. python orion/scripts/import_google_takeout.py /path/to/takeout.json username_to_use --device-to-use=google_lcoation_history
+```
+
+Note that this can take a while depending on how many records you have.
